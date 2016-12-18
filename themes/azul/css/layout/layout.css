@@ -1,0 +1,11 @@
+/**
+ * Add spacing to bottom of pages
+ */
+.page-content {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,33 @@
+/**
+ * Content header.
+ */
+.content-header {
+  background-color: #0084d1;
+  padding-top: 0px;
+  color: #fff;
+}
+.region-header {
+  padding: 1em 0 0;
+  min-height: 2.2em;
+  margin-bottom: 1em;
+}
+.content-header p,
+.content-header pre,
+.content-header li,
+.content-header h1,
+.content-header h2,
+.content-header h3,
+.content-header h4,
+.content-header h5,
+.content-header h6,
+.content-header li.menu-item a {
+  color: #fff;
+}
+.content-header h1 {
+  float: left;
+  font-size: 2em;
+  font-weight: light;
+  font-weight: 400;
+  line-height: 100%;
+}
+

@@ -1,0 +1,79 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/base/elements.css: {}
+      css/base/typography.css: {}
+      css/base/print.css: {}
+    component:
+      css/components/admin-list.css: {}
+      css/components/add-menu.css: {}
+      css/components/appearance.css: {}
+      css/components/content-header.css: {}
+      css/components/breadcrumb.css: {}
+      css/components/buttons.css: {}
+      css/components/colors.css: {}
+      css/components/messages.css: {}
+      css/components/dropbutton.component.css: {}
+      css/components/entity-meta.css: {}
+      css/components/field-ui.css: {}
+      css/components/form.css: {}
+      css/components/help.css: {}
+      css/components/inline-form.css: {}
+      css/components/menus-and-lists.css: {}
+      css/components/modules-page.css: {}
+      css/components/node.css: {}
+      css/components/page-title.css: {}
+      css/components/panel.css: {}
+      css/components/tables.css: {}
+      css/components/tabledrag.css: {}
+      css/components/toolbar.css: {}
+      css/components/tablesort-indicator.css: {}
+      css/components/system-status-report.css: {}
+      css/components/views-ui.css: {}
+      css/components/features.css: {}
+    layout:
+      css/layout/layout.css: {}
+    theme:
+      css/theme/tabs.css: {}
+      css/theme/vertical-tabs.css: {}
+      css/theme/dialog.css: {}
+  dependencies:
+    - system/admin
+
+node-form:
+  version: VERSION
+  css:
+    layout:
+      css/layout/node-add.css: {}
+  dependencies:
+    - node/form
+
+maintenance-page:
+  version: VERSION
+  js:
+    js/mobile.install.js: {}
+  css:
+    theme:
+      css/theme/maintenance-page.css: {}
+  dependencies:
+    - system/maintenance
+    - azul/global-styling
+
+azul.jquery.ui:
+  version: VERSION
+  css:
+    component:
+      css/components/jquery.ui/theme.css: { weight: -1 }
+
+ckeditor-dialog:
+  version: VERSION
+  css:
+    theme:
+      css/theme/ckeditor-dialog.css: {}
+
+tour-styling:
+  version: VERSION
+  css:
+    theme:
+      css/components/tour.theme.css: {}

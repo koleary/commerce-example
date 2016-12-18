@@ -1,0 +1,230 @@
+/**
+ * Form elements.
+ */
+
+fieldset:not(.fieldgroup) {
+  background-color: #fcfcfc;
+}
+label {
+  margin: 0;
+  margin-right: 0.5em; /* LTR */
+}
+[dir="rtl"] label {
+  margin-right: 0;
+  margin-left: 0.5em;
+}
+label.option {
+  margin: 0.5em;
+}
+label.error {
+  color: #a51b00;
+}
+.form-disabled input.form-text,
+.form-disabled input.form-tel,
+.form-disabled input.form-email,
+.form-disabled input.form-url,
+.form-disabled input.form-search,
+.form-disabled input.form-number,
+.form-disabled input.form-color,
+.form-disabled input.form-file,
+.form-disabled textarea.form-textarea,
+.form-disabled select.form-select {
+  border-color: #ddd;
+}
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border-width: 1px;
+  border-color: #e62600;
+  color: #a51b00;
+}
+.form-item textarea.error + .cke {
+  border-width: 1px;
+  border-color: #e62600;
+}
+.form-item input.error:focus,
+.form-item textarea.error:focus,
+.form-item select.error:focus {
+  border-color: #e62600;
+  outline: 0;
+  background-color: #f5f5f5;
+}
+.form-item--error-message {
+  margin-top: 0.15em;
+  color: #e32700;
+}
+.text-format-wrapper .form-item--error-message {
+  border: solid #ccc;
+}
+
+/* Filter */
+.form-item .description.error {
+  color: #a51b00;
+}
+
+.form-text,
+.form-textarea {
+  border-radius: 2px;
+  font-size: 1em;
+  line-height: normal;
+}
+
+input.form-autocomplete,
+input.form-text,
+input.form-tel,
+input.form-email,
+input.form-url,
+input.form-search,
+input.form-number,
+input.form-color,
+input.form-file,
+input.form-date,
+input.form-time,
+textarea.form-textarea {
+  padding: .3em .4em .3em .5em; /* LTR */
+  max-width: 100%;
+  border: 1px solid #b8b8b8;
+  border-top-color: #999;
+  background: #fff;
+  border-radius: 2px;
+  background: #fcfcfc;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .125);
+  font-size: 1em;
+  line-height: normal;
+  color: #595959;
+}
+[dir="rtl"] textarea.form-textarea {
+  padding: .3em .5em .3em .4em;
+}
+.form-text:focus,
+.form-tel:focus,
+.form-email:focus,
+.form-url:focus,
+.form-search:focus,
+.form-number:focus,
+.form-color:focus,
+.form-textarea:focus,
+.form-date:focus,
+.form-time:focus {
+  border-color: #2196f3;
+  outline: 0;
+  background-color: #fff;
+}
+
+/* Style file input where possible (webkit and ie). */
+input.form-file {
+  padding: 0;
+  overflow: hidden;
+  height: 2.05em;
+  border-bottom-color: #777;
+  cursor: pointer;
+}
+::-ms-browse  {
+  background-color: #2196f3;
+  border: 0;
+  border-radius: 0;
+  width: 90px;
+  padding: 0 0.5em;
+  font-family: "Source Sans Pro", "Myriad Pro", "Myriad", "Liberation Sans", sans-serif;
+  font-size: 1em;
+  color: #fff;
+  height: 2em;
+}
+::-webkit-file-upload-button {
+  background-color: #2196f3;
+  border: 0;
+  border-radius: 0;
+  width: 90px;
+  padding: 0 .5em;
+  font-family: "Source Sans Pro", "Myriad Pro", "Myriad", "Liberation Sans", sans-serif;
+  font-size: 1em;
+  color: #fff;
+  height: 2em;
+}
+
+/* Adjust autocomplete position so it's not too close to edge.
+ * @todo create an issue to move styling upstream to Seven.
+ */
+input.form-autocomplete {
+  background-position: 99% center; /* LTR */
+}
+[dir="rtl"] input.form-autocomplete {
+  background-position: 1% center;
+}
+
+/**
+ * Select elements.
+ * @todo create an issue to move firefox select styling upstream to Seven.
+ */
+select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%; /* When the label is longer than the longest option there's an odd gap. */
+  max-width: 200px; /* When the options are very long they can break the layout. */
+  padding: .3em 1.6em .3em 0.5em; /* LTR */
+  border: 1px solid #c5c5c5;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  background-image: url(/core/misc/icons/333333/caret-down.svg);
+  background-position: 98% center;
+  background-repeat: no-repeat;
+  text-shadow: none;
+  font-size: 1em;
+  line-height: normal; /* Stop firefox from adding additional height. */
+  max-height: 2em;
+}
+[dir="rtl"] select {
+  padding: 0.3em 0.5em 0.3em 1.6em;
+  background-position: 2% center, 0 0;
+}
+select:focus,
+select:hover {
+  background-color: #eee;
+  background-image: url(/core/misc/icons/333333/caret-down.svg);
+  outline: none;
+}
+select:hover {
+  box-shadow: none;
+}
+select[multiple] {
+  max-height: none;
+}
+/* Exceptions from Seven cancelled out. */
+#diff-inline-form select,
+div.filter-options select {
+  padding: inherit;
+}
+@media screen and (max-width: 600px) {
+  .form-actions input, .form-wrapper input[type="submit"] {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 6px;
+    width: 100%;
+  }
+  .form-actions input, .form-wrapper .button {
+    padding: padding: 0.3em 1.2em;
+  }
+  .form-item  {
+    margin-top: .25em;
+    margin-bottom: .25em;
+  }
+  .form-item  {
+    margin: .25em 0;
+    width: 100%;
+    min-width: 100%;
+  }
+  .form-item .form-select {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+/* Fix crashing label and text area.
+ * @todo create an issue to move this fix to upstream to Seven.
+ */
+span.machine-name-label {
+  margin: 0 .5em;
+}

@@ -1,0 +1,25 @@
+name: Azul
+type: theme
+description: 'A sub-theme of seven that strips away skeumorphic shadows and gradients and adds vibrant color'
+alt text: 'A sub-theme of seven that strips away skeumorphic shadows and gradients and adds vibrant color'
+package: Core
+version: VERSION
+core: 8.x
+base theme: seven
+libraries:
+ - azul/global-styling
+regions:
+  header: 'Header'
+  tabs: 'Tabs'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
+
+

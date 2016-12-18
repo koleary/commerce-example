@@ -1,0 +1,54 @@
+/* Modules page */
+
+.system-modules tr.even,
+.system-modules tr.odd,
+.locale-translation-status-form tr.even,
+.locale-translation-status-form tr.odd {
+  background: #f5f5f5 !important;
+  border-bottom: 10px solid #fff !important;
+}
+.system-modules tr.even:hover,
+.system-modules tr.odd:hover,
+.locale-translation-status-form tr.even:hover,
+.locale-translation-status-form tr.odd:hover {
+  background: #fcfcfc !important;
+}
+.system-modules label:hover,
+.system-modules-uninstall label:hover {
+  color: #2196f3;
+}
+.system-modules label,
+.system-modules-uninstall label {
+  color: #333;
+  font-weight: normal;
+}
+td.description.expand {
+  padding: 0;
+}
+.system-modules td details {
+  padding: 10px;
+}
+.system-modules details {
+  transition: all .5s ease;
+}
+.system-modules details[open] {
+  background-color: #fff;
+}
+.system-modules td details a,
+.system-modules td details summary {
+  color: #2196f3;
+  text-decoration: none;
+}
+.system-modules td details summary span {
+  color: #333;
+  cursor: pointer;
+}
+.system-modules td details summary span:hover {
+  color: #2196f3;
+}
+.system-modules .details-wrapper {
+  padding: 0;
+}
+.system-modules .requirements {
+  padding: 0;
+ }

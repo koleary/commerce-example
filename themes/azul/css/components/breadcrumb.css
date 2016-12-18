@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Breadcrumbs.
+ */
+
+.breadcrumb {
+  line-height: 1em;
+  padding: 20px 0 10px;
+}
+/*
+ * Fix crashing items and separators.
+ * @todo Move this fix upstream to Seven.
+ */
+.breadcrumb li:before {
+  padding: 0 5px;
+}

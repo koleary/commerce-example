@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Panel styling. Panels are used to visually group items together.
+ */
+
+.panel {
+  margin: 0 0 10px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+

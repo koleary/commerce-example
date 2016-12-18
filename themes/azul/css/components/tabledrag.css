@@ -1,0 +1,38 @@
+/**
+ * @file
+ * Table drag behavior.
+ *
+ * @see tabledrag.js
+ */
+
+/*
+ * Remove brittle positioning that uses floats and margins.
+ * @todo move this upstream, at least to Seven if not tabledrag itself.
+ */
+.draggable a.tabledrag-handle {
+  padding: 0;
+  margin: 0;
+  margin-right: 12px; /* LTR */
+  display: inline;
+  float: none;
+  vertical-align: middle;
+}
+[dir="rtl"] .draggable a.tabledrag-handle {
+  float: none;
+  margin-left: 12px;
+}
+a.tabledrag-handle:hover {
+  text-decoration: none;
+}
+a.tabledrag-handle .handle {
+  background: url(/core/misc/icons/787878/move.svg) no-repeat center;
+  height: auto;
+  width: 16px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+a.tabledrag-handle:hover .handle,
+a.tabledrag-handle:focus .handle {
+  background-image: url(/core/misc/icons/000000/move.svg);
+}

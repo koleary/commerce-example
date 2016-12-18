@@ -1,0 +1,28 @@
+/*
+ * @file
+ * Styles for the Add menu.
+ */
+
+#block-addmenu-2 {
+  margin: 0 1em;
+}
+#block-addmenu-2 ul.menu {
+  background-color: transparent;
+  display: inline-block;
+}
+#block-addmenu-2 ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 .5em;
+}
+#block-addmenu-2 ul li a.menu-link {
+  color: #333;
+}
+#block-addmenu-2 > ul li:before {
+  content: '+';  
+  width: 16px;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline-block;
+}

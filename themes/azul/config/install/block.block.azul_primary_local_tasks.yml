@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - azul
+_core:
+  default_config_hash: j_M1E0XbSjeWZEnk_FjSy9L4mMxaHUde0Cazqqpx7N0
+id: azul_primary_local_tasks
+theme: azul
+region: tabs
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

@@ -1,0 +1,13 @@
+/* 
+ * @file 
+ * Fixes specific to features module UI.
+ */
+
+/* Conflicts form item checkbox floats up to top. */
+.form-item-conflicts {
+  clear: left; /* LTR */
+ }
+[dir="rtl"] .form-item-conflicts {
+  float: right;
+  clear: right;
+}

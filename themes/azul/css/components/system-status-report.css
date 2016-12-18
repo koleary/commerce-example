@@ -1,0 +1,27 @@
+/**
+ * @file
+ * Azul styles for the System Status Report.
+ */
+
+.system-status-report__entry {
+  border-top: 1px solid #ccc;
+  border-bottom: inherit;
+}
+.system-status-report__entry:first-child {
+  border-top: 1px solid #ccc;
+}
+.system-status-report__entry:last-child {
+  border-bottom: 1px solid #ccc;
+}
+/* Remove brittle absolute positioning and replace with inline-block. */
+.system-status-report__status-icon:before {
+  box-sizing: border-box;
+  width: 30px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center -1px;
+  position: static;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -33px;
+}

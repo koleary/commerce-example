@@ -1,0 +1,21 @@
+/**
+ * Generic elements.
+ */
+
+/** The font here can act as a fallback in case nothing is set in the theme settings page **/
+body {
+  color: #333;
+  background: #fff;
+  font: normal 81.3%/1.538em "Source Sans Pro", "Myriad Pro", "Myriad", "Liberation Sans", sans-serif;
+}
+
+a,
+.link {
+  color: #2196f3;
+}
+
+h2,
+.heading-b {
+  font-weight: normal;
+  color: #777;
+}

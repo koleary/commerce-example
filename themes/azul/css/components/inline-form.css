@@ -1,0 +1,92 @@
+/**
+ * @file
+ * Inline items.
+ */
+
+.container-inline div {
+  display: inline-block;
+}
+.container-inline label {
+  display: block;
+}
+
+/* Details contents always need to be rendered as block. */
+.container-inline .details-wrapper {
+  display: block;
+}
+.container-inline > * + *,
+.container-inline .details-wrapper > * + * {
+  padding-left: 0;
+}
+.container-inline .form-item {
+  display: inline-block;
+  margin: 0.25em .5em 0.25em 0; /* LTR */
+  width: 100%;
+}
+[dir="rtl"] .container-inline .form-item {
+  margin-left: .25em;
+  margin-right: 0;
+}
+.form--inline .form-actions {
+  display: block;
+  margin: 0;
+}
+
+/* Move bulk operations and filter buttons inline with the form. */
+@media screen and (min-width: 600px) {
+  [data-drupal-selector*="bulk-form"] .form-item,
+  .form--inline .form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .form--inline .form-actions {
+    display: inline-block;
+    margin: 0 0 0.75em 0;
+  }
+  [data-drupal-selector*="bulk-form"] > .form-actions {
+    display: inline-block;
+    margin: 0 0 0.75em 0;
+    margin-right: .5em;
+  }
+  [data-drupal-selector*="bulk-form"] > .form-item-action {
+    display: inline-block;
+    margin-right: .5em;
+  }
+  /*
+   * Give the button an invisible fake label so it always aligns with selects.
+   * Must match form label style exactly.
+   */
+  .form--inline .form-actions:before,
+  [data-drupal-selector*="bulk-form"] > .form-actions:before {
+    content: 'button';
+    color: transparent;
+    font-size: 1em;
+    display: table;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container-inline .form-item,
+  .container-inline .form-actions,
+  [data-drupal-selector*="bulk-form"] .form-actions {
+    margin-top: .25em;
+    margin-bottom: .25em;
+  }
+  .form-actions input:first-child, .form-wrapper input[type="submit"]:first-child {
+    margin-top: .5em;
+  }
+  .form-actions,
+  .form-select,
+  input {
+    width: 100%;
+  }
+}
+/* Prevent styles from above bleeding into dropbutton. */
+@media screen and (max-width: 600px) {
+  .dropbutton .dropbutton-action > input[type="submit"]:first-child {
+    margin-top: 0;
+  }
+}
+
+

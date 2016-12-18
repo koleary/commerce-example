@@ -1,0 +1,64 @@
+/**
+ * @file
+ * Azul styles for Tables.
+ */
+
+thead th {
+  background: #f5f5f5;
+}
+tr {
+  border-bottom: 1px solid #ddd;
+  padding: 0;
+  margin: 0;
+  line-height: 100%;
+  transition: background-color .5s ease;
+}
+thead > tr {
+  border-bottom: 1px solid #ccc;
+}
+tbody tr:hover,
+tbody tr:focus {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+tbody tr:hover .region-empty {
+  background-color: transparent;
+}
+tr > td {
+  padding: 8px 12px;
+  line-height: normal;
+}
+
+/* Remove semantic background hover color. */
+tbody tr.color-warning:hover,
+tbody tr.color-warning:focus,
+tbody tr.color-error:hover,
+tbody tr.color-error:focus {
+  background: #fcfcfc;
+}
+
+/* Must match negative bottom padding of the parent <th> */
+th {
+  text-align: left; /* LTR */
+  padding: 12px;
+}
+th > a:after {
+  bottom: -12px;
+}
+th.is-active > a {
+  color: #004875;
+}
+th.is-active > a:after {
+  border-bottom-color: #2196f3;
+}
+th > a:hover,
+th > a:focus,
+th.is-active > a:hover,
+th.is-active > a:focus {
+  color: #2196f3;
+}
+th > a:hover:after,
+th > a:focus:after,
+th.is-active > a:hover:after,
+th.is-active > a:focus:after {
+  border-bottom-color: #2196f3;
+}

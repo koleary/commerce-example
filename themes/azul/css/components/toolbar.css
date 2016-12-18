@@ -1,0 +1,10 @@
+/**
+ * Toolbar.
+ */
+
+/* Remove shadows from all trays. */
+.toolbar .toolbar-bar,
+.toolbar .toolbar-tray-horizontal,
+.toolbar .toolbar-tray-vertical {
+  box-shadow: none;
+}
