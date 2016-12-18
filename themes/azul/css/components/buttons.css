@@ -1,0 +1,203 @@
+/**
+ * @file
+ * Styles for Azul's UI buttons
+ */
+
+/* Restyle buttons and remove special casing for danger. */
+.button,
+.button--danger {
+  border: 1px solid #aaa;
+  border-radius: 20em;
+  margin-left: 0;
+  margin-right: .5em; /* LTR */
+  padding: 0.3em 1.2em;
+  background-color: #fff;
+  background-image: none;
+  font-size: 1em;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+[dir="rtl"] .button,
+[dir="rtl"] .button--danger {
+  margin-left: 0.5em;
+  margin-right: 0;
+}
+.button:hover,
+.button:focus,
+.button--danger:hover,
+.button--danger:focus {
+  background-color: #2196f3;
+  border: 1px solid #2196f3;
+  padding: 0.3em 1.2em;
+  background-image: none;
+  color: #fff;
+}
+.button:hover,
+.button--danger:hover {
+  box-shadow: none;
+}
+
+/* Prevent focus ring being covered by next siblings. */
+.button:focus,
+.button--danger:focus  {
+  border: 1px solid #2196f3;
+  box-shadow: 0 0 4px #2196f3;
+  background-color: #2196f3;
+  color: #fff;
+}
+.button:active,
+.button--danger:active {
+  border: 1px solid #2196f3;
+  background-color: #2196f3;
+  color: #fff;
+  background-image: none;
+  box-shadow: 0 0 4px #2196f3;
+}
+.button--danger {  
+  display: inline-block;
+  color: #c72100;
+}
+
+/* Primary button. */
+.button--primary {
+  border-color: #2196f3;
+  background-color: #2196f3;
+  background-image: none;
+  font-size: 1em;
+  color: #fff;
+  text-shadow: none;
+  vertical-align: top;
+}
+.button--primary:hover,
+.button--primary:focus {
+  background-color: #2196f3;
+  background-image: none;
+  border-color: #2196f3;
+  color: #fff;
+}
+.button--primary:focus {
+  border: 1px solid #2196f3;
+}
+.button--primary:hover {
+  box-shadow: none;
+}
+.button--primary:active {
+  background-image: none;
+  border-color: transparent;
+  box-shadow: 0 0 4px #2196f3;
+}
+
+/* Disabled button. */
+.button:disabled,
+.button:disabled:active,
+.button.is-disabled,
+.button.is-disabled:active,
+.button--danger:disabled,
+.button--danger.is-disabled  {
+  border-color: #ddd;
+  color: #555;
+  text-shadow: none;
+}
+
+/* Link actions. */
+.link {
+  color: #2196f3;
+}
+.link:hover,
+.link:focus {
+  color: #2196f3;
+}
+
+/* Reset special casing on danger button from Seven. */
+@media screen and (max-width: 600px) {
+  .button--danger {
+    display: inline-block;
+    margin: .5em 0 0;
+    width: 100%;
+  }
+}
+
+/* Adjust Seven's poorly sized and cramped plus icon.
+ * @todo create an issue to move this fix to upstream to Seven.
+ */
+.no-touchevents .button--small {
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 2px 1em;
+}
+.button-action:before {
+  margin-left: -0.2em;
+  padding-right: 0.2em;
+  font-size: 1.5em;
+  line-height: .5em;
+  vertical-align: middle;
+}
+
+/* Additional styles for groups of buttons. 
+@media screen and (min-width: 600px) {
+  .button {
+    margin-left: 0;
+    margin-right: 0;
+  }
+    .button:last-child {
+    border-radius: 0 20em 20em 0; /* LTR 
+  }
+  .button:first-child {
+    border-radius: 20em 0 0 20em; /* LTR 
+  }
+  .button:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+  [dir="rtl"] .button:last-child {
+    border-radius: 20em 0 0 20em;
+  }
+  [dir="rtl"] .button:first-child {
+    border-radius: 0 20em 20em 0;
+  }
+  input[type='submit] {
+    border-radius: 20em;
+  }
+  .button--danger {
+    width: auto;
+    margin: 0;
+  }
+  .button--danger:hover,
+  .button--danger:focus,
+  .button--danger:active {
+    color: #fff;
+    background: ff2a00;
+  }
+  #edit-cancel {
+    margin-left: -2px;
+  }
+  #edit-preview {
+    border: 0;
+    background: none;
+  }
+  #edit-preview:hover,
+  #edit-preview:focus {
+    color: #2196f3;
+    border: 0;
+    background: none;
+  }
+}*/
+
+/* Change action link button color when it's in header. */
+.content-header ul.action-links .button {
+  background: #fff;
+  color: #555;
+  font-weight: normal;
+}
+.content-header ul.action-links .button:before {
+  color: #2196f3;
+}
+.content-header ul.action-links .button:hover,
+.content-header ul.action-links .button:focus,
+.content-header ul.action-links .button:active {
+  color: #2196f3;
+}
+.content-header ul.action-links {
+  float: right;
+  margin: 0 0 1em 0;
+}

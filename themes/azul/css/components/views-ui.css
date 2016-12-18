@@ -1,0 +1,141 @@
+/**
+ * Views styling
+ */
+
+.views-display-top,
+.view-preview-form__title,
+.form-edit .form-actions {
+  background-color: #f5f5f5;
+}
+.views-displays ul.secondary li a {
+  color: #0074bd;
+}
+.views-displays ul.secondary li.is-active a,
+.views-displays ul.secondary li.is-active a.is-active {
+  border: 1px solid transparent;
+}
+#edit-display-settings-title {
+  color: #2196f3;
+}
+.views-displays .secondary .open > a:hover,
+.views-displays .secondary .open > a:focus {
+  background-color: #f5f5f5;
+  color: #2196f3;
+}
+.views-display-column {
+  border: 0;
+}
+.views-displays .secondary .action-list input.form-submit {
+  color: #2196f3;
+}
+.views-ui-display-tab-bucket h3 {
+  text-transform: uppercase;
+}
+.edit-display-settings-top.views-ui-display-tab-bucket {
+  border: 0;
+  padding-top: 0;
+  line-height: 28px;
+}
+.views-ui-display-tab-bucket .views-display-setting:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+.views-ui-rearrange-filter-form table {
+  border: medium none;
+}
+.views-ui-rearrange-filter-form [id^="views-row"] {
+  border: medium none;
+}
+.views-ui-rearrange-filter-form .filter-group-operator-row {
+  border-left: 1px solid transparent !important;
+  border-right: 1px solid transparent !important;
+}
+.views-ui-rearrange-filter-form tr.drag td {
+  background-color: #f5f5f5 !important;
+}
+.views-ui-rearrange-filter-form tr.drag-previous td {
+  background-color: #f1f1f1 !important;
+}
+
+/* Style displays tabs like buttons. */
+.views-displays .tabs.secondary li a {
+  border: 1px solid #aaa;
+  border-radius: 20em;
+  padding: 0.2em 1.2em;
+  background-color: #fff;
+  background-image: none;
+  font-size: 1em;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-font-smoothing: antialiased;
+}
+.views-displays .tabs.secondary li.is-active a {
+  background: #2196f3;
+  border: 1px solid #ddd;
+  padding: 0.2em 1.2em;
+  font-size: 1em;
+  color: #fff;
+}
+.views-displays .tabs.secondary li.add a {
+  padding: 0.2em 1em 0.2em 1.7em;
+}
+.views-displays .tabs .action-list li {
+  background-color: #fff;
+  border-color: #ccc;
+  transition: background-color .2s ease;
+}
+.views-displays .tabs .action-list li:hover {
+  background-color: #2196f3;
+}
+.views-displays .tabs .action-list li input {
+  color: #333;
+}
+.views-displays .tabs .action-list li:hover input {
+  color: #fff;
+}
+.views-displays .secondary .action-list li:first-child {
+  border-radius: 7px 7px 0 0;
+}
+
+/*
+ * Remove the ham-handed span implementation of icon.
+ * @todo create an issue to move this fix to upstream to Seven.
+ */
+span.icon.add {
+  display: none;
+}
+/* Replace with before pseudo-element. */
+.views-displays .tabs .add a:before {
+  content: '+';
+  position: absolute;
+  font-weight: 900;
+  left: 10px;
+  top: 0;
+  font-size: 1.6em;
+  color: #2196f3;
+}
+.views-displays .tabs .action-list {
+  top: 0;
+  z-index: 100;
+}
+
+/* Stop field and input crashing in preview. */
+.view-preview-form .arguments-preview,
+.view-preview-form .form-item-view-args {
+  margin-right: 10px;
+}
+
+/* Special cases for jquery dialogs. */
+div.views-ui-dialog .views-offset-top {
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f5f5 !important;
+}
+.views-ui-dialog .views-offset-bottom {
+  border-top: 1px solid transparent;
+}
+.views-filterable-options {
+  border-top: 0;
+}

@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Azul theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function azul_preprocess_html(&$vars) {
+
+  $style = '';
+  // Get the theme settting font size.
+  $font_size = theme_get_setting('font_size');
+  if ($font_size) {
+    $style .= 'font-size: ' . $font_size . 'em;';
+  }
+
+  // Get the theme setting font family.
+  $font_family = theme_get_setting('font_family');
+  if ($font_family) {
+
+    $font_families = [
+      // Font familes.
+      'tahoma' => 'Tahoma, Geneva, sans-serif',
+      'lucida-sans-unicode' => 'Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif',
+      'verdana' => 'Verdana, Geneva, sans-serif',
+      'arial' => 'Arial, Helvetica, sans-serif',
+      'ubuntu' => 'Ubuntu, sans-serif',
+      'open-sans' => '"Open Sans", sans-serif',
+      'pt-sans' => '"PT Sans", sans-serif',
+      'roboto' => 'Roboto, sans-serif',
+      'source-sans-pro' => '"Source Sans Pro", sans-serif',
+    ];
+
+    $style .= 'font-family: ' . $font_families[$font_family];
+  }
+
+  if ($style) {
+    $vars['attributes']['style'] = $style;
+  }
+}
+
+/**
+ * Implements hook_attachments_alter().
+ */
+function azul_page_attachments_alter(array &$page) {
+
+  // Load google fonts if needed.
+  $google_fonts = [
+    'ubuntu' => 'Ubuntu',
+    'open-sans' => 'Open+Sans',
+    'pt-sans' => 'PT+Sans',
+    'roboto' => 'Roboto',
+    'source-sans-pro' => 'Source+Sans+Pro',
+  ];
+
+  // Render the fonts.
+  $font = theme_get_setting('font_family');
+  if (isset($google_fonts[$font])) {
+    $font_link = [
+      '#type' => 'html_tag',
+      '#tag' => 'link',
+      '#attributes' => [
+        'href' => 'https://fonts.googleapis.com/css?family=' . $google_fonts[$font],
+        'rel' => 'stylesheet',
+        'type' => 'text/css',
+      ],
+    ];
+    $page['#attached']['html_head'][] = [$font_link, 'font_link'];
+  }
+
+}

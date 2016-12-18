@@ -1,0 +1,15 @@
+/**
+ * Menus and lists.
+ */
+
+/*
+ * @todo Make these into SVGs then move upstream to Seven.
+ */
+.item-list ul li.collapsed,
+.menu-item--collapsed {
+  list-style-image: url(/core/misc/menu-collapsed.png);
+}
+.item-list ul li.expanded,
+.menu-item--expanded {
+  list-style-image: url(/core/misc/menu-expanded.png);
+}

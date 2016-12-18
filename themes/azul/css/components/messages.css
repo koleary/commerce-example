@@ -1,0 +1,17 @@
+/**
+ * Messages.
+ */
+.messages {
+  background-color: #f1f1f1;
+  border-color: transparent;
+  border-radius: 0;
+}
+.messages--error {
+  box-shadow: -8px 0 0 #ee0000;
+}
+.messages--warning {
+  box-shadow: -8px 0 0 #ee8800;
+}
+.messages--status {
+  box-shadow: -8px 0 0 #77cc00;
+}

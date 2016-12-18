@@ -1,0 +1,9 @@
+/*
+ * @file
+ * Styles for the Appearance page.
+ */
+
+.theme-selector .screenshot {
+  padding: 0;
+  border: 1px solid #ccc;
+}
