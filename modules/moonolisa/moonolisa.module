@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Provides Moono lisa skin for CKEditor WYSIWYG editor.
+ * See http://ckeditor.com/addon/moono-lisa
+ *
+ * Enforcing globally the moono lisa skin is by design.
+ * CKEditor itself does not support changing skins on the fly,
+ * It means that setting skin per text format would not work anyway,
+ */
+
+/**
+ * Implements hook_editor_js_settings_alter
+ * @param array $settings
+ */
+function moonolisa_editor_js_settings_alter(array &$settings) {
+  if (empty($settings['editor']['formats']))
+    return;
+  foreach ($settings['editor']['formats'] as $format => $setting) {
+    // http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-skin
+    // When setting config.skin it is possible to specify custom skin location after a comma.
+    if ($setting['editor'] == 'ckeditor')
+      $settings['editor']['formats'][$format]['editorSettings']['skin'] = 'moonolisa,' . base_path() . drupal_get_path('module', 'moonolisa') . '/js/skins/moono-lisa/';
+  }
+}
